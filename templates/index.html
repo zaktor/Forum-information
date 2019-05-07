@@ -1,0 +1,23 @@
+<!DOCTYPE html>         
+<html>
+<head>
+  <title>index page</title>
+</head>
+<body>
+
+	<a href="/logout"></a>
+
+
+  <h1>discussion</h1>
+
+  <ul>
+		{% for discussion in discussions %}
+			<li><a href="/discussion/{{ discussion.id }}">{{discussion.title}}</a></li>
+		{% endfor %}
+	</ul>
+
+
+  
+
+</body>
+</html>

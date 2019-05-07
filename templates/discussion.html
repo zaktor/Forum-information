@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<title>{{ discussion.title }}</title>
+</head>
+
+
+<body>
+{% if 'username' in session %}
+
+<a href="/logout">logout</a>
+  {% else $}
+  <a href="/login">login</a>
+ 
+{% endif %}
+
+<form method="POST" action="/discussion/{{ discussion.id}}">
+	<h3>Leave a message</h3>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+
+
+<div class="card" style="width: 50rem;">
+  <h4>{{ discussion.title }}</h4>
+
+<hr>
+  <ul class="list-group list-group-flush">
+    {% for message in messages %}
+
+    
+     <li>
+     	<b> {{message.user.username}}:</b><br>
+     	{{message.text}}<br>
+     	<em>{{message.date}}</em>
+     	<hr>
+     </li>
+     
+    {% endfor %}
+    
+  </ul>
+
+
+</div>
+</div>
+</div>
+</body>
+</html>

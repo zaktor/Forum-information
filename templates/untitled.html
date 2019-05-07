@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ user.username}}</title>
+</head>
+<body>
+	
+	<h4>{{ user.username}}</h4>
+
+	{% if username in session and user.username == session['username'] %}
+	{% with error_messages == get_flashed_messages() %}
+		{% if error_messages %}
+		
+	
+
+	<form method="POST" action="/profile/{{ user.id }}">
+		<label>Old password</label><br>
+		<input type="password" name="old-password">
+
+	<ul>
+	{% for messages in messages %}
+	<li> {{ message.text}}</li>
+	{% endfor %}
+	</ul> 
+
+</body>
+</html>

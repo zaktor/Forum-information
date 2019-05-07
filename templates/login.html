@@ -1,0 +1,30 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+</head>
+<body>
+<h1>Login</h1>
+​
+{% with error_messages = get_flashed_messages() %}
+  {% if error_messages %}
+   <ul>
+   {% for error_message in error_messages %}
+    <li>{{ error_message }}</li>
+   {% endfor %}
+   </ul>
+  {% endif %}
+ {% endwith %}
+​
+​
+<form method="POST" action="/login">
+	<label>username:</label><br>
+	<input type="text" name="username"><br>
+	<label>password:</label><br>
+	<input type="text" name="password"><br>
+	<button type="submit">submit</button>
+</form>
+​
+</body>
+</html>
