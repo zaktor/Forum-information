@@ -112,9 +112,10 @@ def profile(user_id):
     			flash('username is already takem')
 
 
-# dsjasfjashjk
+# dnflkdflkdfldks
 
-    # vsnjkndskjv
+#kdnvkldsnvlksdfnbvk
+
 
     	# verifier si le username demande n est pas deja pris
     	# recuperer le user avec son username de la session
